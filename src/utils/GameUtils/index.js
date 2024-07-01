@@ -29,7 +29,5 @@ export const checkForWinner = (board) => {
       console.log('diagonal winner')
     return true;
   }
-
-
-
+  return false;
 }

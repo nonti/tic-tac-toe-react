@@ -3,6 +3,7 @@ import { Container } from '../../styles/General.styled';
 import { GameBoardStyle } from './Game.styled';
 import GameCell from '../../components/GameCell/GameCell';
 import { GameContext } from '../../contexts/GameContext';
+import Player from '../../contexts/Player/Player';
 
 const Game = () => {
   
@@ -10,6 +11,7 @@ const Game = () => {
 
   return (
     <Container>
+      <Player player={game.player1} />
       <GameBoardStyle>
         {
           game.board.map((item, index) => (
@@ -17,8 +19,9 @@ const Game = () => {
           ))
         }
       </GameBoardStyle>
+      <Player player={game.player2} />
     </Container>
-  )
-}
+  );
+};
 
 export default Game;

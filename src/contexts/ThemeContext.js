@@ -1,10 +1,10 @@
-import { createContext, useState } from "react";
+import React, { createContext, useState } from 'react';
 
 export const ThemeContext = createContext({});
 
 export const ThemeContextProvider = ({ children }) => {
     
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState('light');
 
   const toggleTheme = () => {
     console.log('updated theme',theme === 'light' ?  'dark': 'light')
